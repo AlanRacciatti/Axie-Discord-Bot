@@ -50,5 +50,5 @@ bot.on("messageCreate", (msg) => {
 
 });
 
-// **** Login ****
+// **** Login ***
 bot.login(process.env.DJS_TOKEN);
