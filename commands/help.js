@@ -7,7 +7,7 @@ module.exports = (data) => {
 	.setDescription('Commands with functionalities I think would be useful, hope you like it :)')
 	.addFields(
     )
-	.addField('$myaxies (ronin wallet)', 'It will show the whole Axies in this Ronin Wallet', true)
+	.addField('$myaxies {ronin wallet}', 'It will show the whole Axies in this Ronin Wallet', true)
 	.setTimestamp()
 
 data.msg.reply({ embeds: [helpEmbed] });
