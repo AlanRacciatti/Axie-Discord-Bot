@@ -1,56 +1,58 @@
-console.clear()
+console.log("buenas")
 
-// **** Require's ****
-const axios = require('axios').default;
-const {Client, Intents} = require('discord.js');
-const {token, prefix, logo} = require('./config.json');
+// console.clear()
 
-// **** Bot setup ****
-const bot = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
+// // **** Require's ****
+// const axios = require('axios').default;
+// const {Client, Intents} = require('discord.js');
+// const {token, prefix, logo} = require('./config.json');
 
-bot.on("ready", () => {
-    console.log("Bot is ready");
-    bot.user.setActivity(`${prefix}help`, {type: "PLAYING"})
-    if (!bot.user.avatar === "https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png") {
-        bot.user.setAvatar("https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png")
-    }
-    bot.user.setUsername("Axie Bot")
-});
+// // **** Bot setup ****
+// const bot = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
 
-// **** Commands ****
-const help = require('./commands/help');
-const myAxies = require('./commands/myAxies');
+// bot.on("ready", () => {
+//     console.log("Bot is ready");
+//     bot.user.setActivity(`${prefix}help`, {type: "PLAYING"})
+//     if (!bot.user.avatar === "https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png") {
+//         bot.user.setAvatar("https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png")
+//     }
+//     bot.user.setUsername("Axie Bot")
+// });
 
-// **** Commands handler
-bot.on("messageCreate", (msg) => {
+// // **** Commands ****
+// const help = require('./commands/help');
+// const myAxies = require('./commands/myAxies');
 
-    if (msg.author.bot) return;
-    if (!msg.content.startsWith(prefix)) return;
+// // **** Commands handler
+// bot.on("messageCreate", (msg) => {
 
-    const commandBody = msg.content.slice(prefix.length);
-    const args = commandBody.split(' ');
-    const command = args.shift().toLowerCase();
+//     if (msg.author.bot) return;
+//     if (!msg.content.startsWith(prefix)) return;
 
-    if (command === "help") {
+//     const commandBody = msg.content.slice(prefix.length);
+//     const args = commandBody.split(' ');
+//     const command = args.shift().toLowerCase();
 
-        let data = {
-            msg: msg,
-            logo: logo
-        }
+//     if (command === "help") {
 
-        help(data)
-    } else if (command === "myaxies") {
+//         let data = {
+//             msg: msg,
+//             logo: logo
+//         }
 
-        let info = {
-            msg: msg,
-            args: args
-        }
+//         help(data)
+//     } else if (command === "myaxies") {
 
-        myAxies(info)
+//         let info = {
+//             msg: msg,
+//             args: args
+//         }
 
-    }
+//         myAxies(info)
 
-});
+//     }
 
-// **** Login ****
-bot.login(process.env.DJS_TOKEN);
+// });
+
+// // **** Login ****
+// bot.login(process.env.DJS_TOKEN);
