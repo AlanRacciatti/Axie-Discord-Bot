@@ -1,5 +1,5 @@
 console.clear()
-// **** Require's ****
+// **** Require's ***
 const {Client, Intents} = require('discord.js');
 const {token, prefix, logo} = require('./config.json');
 
