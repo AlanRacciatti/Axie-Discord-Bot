@@ -20,6 +20,7 @@ bot.on("ready", () => {
 const help = require('./commands/help');
 const myAxies = require('./commands/myAxies');
 const myAccount = require('./commands/myAccount')
+const coins = require('./commands/coins')
 
 // **** Commands handler
 bot.on("messageCreate", (msg) => {
@@ -71,6 +72,14 @@ bot.on("messageCreate", (msg) => {
         }
 
         myAccount(info)
+
+    } else if (command === "coins") {
+
+        let info = {
+            msg: msg
+        }
+
+        coins(info)
 
     }
 
