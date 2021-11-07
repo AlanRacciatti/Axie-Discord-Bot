@@ -8,7 +8,7 @@ module.exports = (info) => {
     if (typeof(info.args[0]) !== "string" || !info.args[0].startsWith("ronin:")) {
         let embedInfo = {
             title: "Error!",
-            description: "Unvalid arguments, try with something like `$myaxies ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
+            description: "Unvalid arguments, try with something like `-myaxies ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
         }
         info.msg.reply({ embeds: [normalEmbed(embedInfo)] }) 
     } else {

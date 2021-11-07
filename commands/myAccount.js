@@ -8,7 +8,7 @@ module.exports = (info) => {
     if (typeof(info.args[0]) !== "string" || !info.args[0].startsWith("ronin:")) {
         let embedInfo = {
             title: "Error!",
-            description: "Unvalid arguments, try with something like `$myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
+            description: "Unvalid arguments, try with something like `-myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
         }
         info.msg.reply({ embeds: [normalEmbed(embedInfo)] }) 
     } else {
@@ -26,14 +26,14 @@ module.exports = (info) => {
             if (data.data.leaderboard.name === undefined) {
                 let embedInfo = {
                     title: "Error!",
-                    description: "We couldn't find your account, try with something like `$myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
+                    description: "We couldn't find your account, try with something like `-myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
                 }
                 info.msg.reply({ embeds: [normalEmbed(embedInfo)] })                                     
             } else {
                 if (data.data.leaderboard.name === null) {
                     let embedInfo = {
                         title: "Error!",
-                        description: "We couldn't find your account, try with something like `$myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
+                        description: "We couldn't find your account, try with something like `-myaccount ronin:63983c3de9872f8671d87faa5261d5acf0eb2fc8`"
                     }
                     info.msg.reply({ embeds: [normalEmbed(embedInfo)] })
                 } else {
