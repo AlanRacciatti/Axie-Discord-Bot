@@ -2,6 +2,7 @@ console.clear()
 // **** Require's ***
 const {Client, Intents} = require('discord.js');
 const {token, prefix, logo} = require('./config.json');
+const normalEmbed = require('./embeds/normalEmbed');
 
 // **** Bot setup ****
 const bot = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
@@ -18,6 +19,7 @@ bot.on("ready", () => {
 // **** Commands ****
 const help = require('./commands/help');
 const myAxies = require('./commands/myAxies');
+const myAccount = require('./commands/myAccount')
 
 // **** Commands handler
 bot.on("messageCreate", (msg) => {
@@ -37,7 +39,15 @@ bot.on("messageCreate", (msg) => {
         }
 
         help(data)
+
     } else if (command === "myaxies") {
+
+        let embedInfo = {
+            title: "Running command",
+            description: "Running the command `myaxies`"
+        }
+
+        msg.channel.send({ embeds: [normalEmbed(embedInfo)] })
 
         let info = {
             msg: msg,
@@ -46,9 +56,25 @@ bot.on("messageCreate", (msg) => {
 
         myAxies(info)
 
+    } else if (command === "myaccount") {
+
+        let embedInfo = {
+            title: "Running command",
+            description: "Running the command `myaccount`"
+        }
+
+        msg.channel.send({ embeds: [normalEmbed(embedInfo)] })
+
+        let info = {
+            msg: msg,
+            args: args
+        }
+
+        myAccount(info)
+
     }
 
 });
 
 // *** Login ***
-bot.login(process.env.DJS_TOKEN);
+bot.login(process.env.DJS_TOKEN || token);
