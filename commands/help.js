@@ -8,6 +8,7 @@ module.exports = (info) => {
 	.addField('-myaxies `ronin wallet`', 'It will show the whole Axies in this Ronin Account')
 	.addField('-myaccount `ronin wallet`', 'It will show info and stats of this Ronin Account')
 	.addField('-coins', 'It will show statistics of `SLP` and `AXS`')
+	.addField('-savewallet `name` `ronin wallet`', 'It will save your wallet so you can put your name instead of your wallet in the other command')
 	.setTimestamp()
 
 info.msg.reply({ embeds: [helpEmbed] })

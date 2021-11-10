@@ -30,8 +30,6 @@ module.exports = info => {
                 price_change_24h: data.data.market_data.price_change_percentage_24h
             }
 
-            console.log(infoAXS)
-
             info.msg.reply({ embeds: [coinsEmbed(infoAXS)] })
 
         })

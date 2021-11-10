@@ -21,6 +21,7 @@ const help = require('./commands/help');
 const myAxies = require('./commands/myAxies');
 const myAccount = require('./commands/myAccount')
 const coins = require('./commands/coins')
+const saveWallet = require('./commands/saveWallet')
 
 // **** Commands handler
 bot.on("messageCreate", (msg) => {
@@ -80,6 +81,15 @@ bot.on("messageCreate", (msg) => {
         }
 
         coins(info)
+
+    } else if (command === "savewallet") {
+        
+        let info = {
+            msg: msg,
+            args: args
+        }
+
+        saveWallet(info)
 
     }
 
