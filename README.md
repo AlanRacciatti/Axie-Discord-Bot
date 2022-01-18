@@ -1,4 +1,4 @@
-# League of legends NFT collection
+# Axie Infinity Discord Bot
 
 ## Welcome!
 This is a Discord bot made with Node.js using Discord.js. The objective is to make it easier for people to share data about his Axie Infinity accounts or team via Discord, as much as getting the coins prices.
