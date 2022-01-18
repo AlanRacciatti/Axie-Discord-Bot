@@ -1,4 +1,5 @@
 const db = require('../database/models');
+require('dotenv').config();
 
 module.exports = async (info) => {
 
@@ -38,7 +39,7 @@ module.exports = async (info) => {
                 params: {id: walletAddress},
                 headers: {
                 'x-rapidapi-host': 'axie-infinity.p.rapidapi.com',
-                'x-rapidapi-key': 'bb687891e2msh4f4d12cc617b010p159ec2jsn620fe1d28dc1'
+                'x-rapidapi-key': process.env.RAPIDAPIKEY
                 }
             })
             .then(data => {
