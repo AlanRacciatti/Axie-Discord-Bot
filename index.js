@@ -1,7 +1,7 @@
 console.clear()
 // **** Require's ***
 const {Client, Intents} = require('discord.js');
-const {token, prefix, logo} = require('./config.json');
+const {token, prefix, logo} = require('./config.js');
 const normalEmbed = require('./embeds/normalEmbed');
 
 // **** Bot setup ****

@@ -1,5 +1,7 @@
-{
+require('dotenv').config();
+
+module.exports = {
     "prefix": "-",
-    "token": "OTA2MTEyOTk5OTUyMTA1NDcy.YYT5fQ.UsLDIwOgoP5D5fz9fFoS6ASYsN8",
+    "token": process.env.TOKEN,
     "logo": "https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png"
 }
