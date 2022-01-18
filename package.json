@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "discord.js": "^13.3.1",
+    "dotenv": "^14.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0",

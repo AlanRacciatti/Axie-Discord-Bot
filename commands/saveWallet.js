@@ -44,6 +44,7 @@ module.exports = async (info) => {
                 }
             })
 
+            console.log(isWalletSaved.length)
             if (isWalletSaved.length === 0) {
                 
                 let walletInfo = {

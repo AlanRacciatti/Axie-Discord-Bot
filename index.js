@@ -8,7 +8,7 @@ const normalEmbed = require('./embeds/normalEmbed');
 const bot = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
 
 bot.on("ready", () => {
-    console.log("Bot is readyy");
+    console.log("Bot is ready");
     bot.user.setActivity(`${prefix}help`, {type: "PLAYING"})
     if (!bot.user.avatar === "https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png") {
         bot.user.setAvatar("https://storage.googleapis.com/assets.axieinfinity.com/axies/277561/axie/axie-full.png")
