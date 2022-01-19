@@ -5,6 +5,13 @@
 ## Welcome!
 This is a Discord bot made with Node.js using Discord.js. The objective is to make it easier for people to share data about his Axie Infinity accounts or team via Discord, as much as getting the coins prices.
 
+## Table of contents
+
+- [Installation and usage](#installation-and-usage)
+- [Commands](#commands)
+- [Support](#support)
+- [About the project](#about-the-project)
+
 ## Installation and usage
 
 Use the package manager [npm](https://www.npmjs.com/) to install the packages
