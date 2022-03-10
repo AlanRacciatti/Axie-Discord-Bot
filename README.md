@@ -1,6 +1,7 @@
 # Axie Infinity Discord Bot
 
-#### [Add the bot to your server!](https://discord.com/api/oauth2/authorize?client_id=906112999952105472&permissions=8&scope=bot)
+#### This bot is actually unactive, feel free to host it by your own ways
+
 
 ## Welcome!
 This is a Discord bot made with Node.js using Discord.js. The objective is to make it easier for people to share data about his Axie Infinity accounts or team via Discord, as much as getting the coins prices.
